@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mahasiswas",
+  "info": {
+    "singularName": "mahasiswa",
+    "pluralName": "mahasiswas",
+    "displayName": "Mahasiswa",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nama": {
+      "type": "string"
+    },
+    "Semester": {
+      "type": "integer"
+    },
+    "Jurusan": {
+      "type": "string"
+    },
+    "nilais": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nilai.nilai",
+      "mappedBy": "mahasiswa"
+    },
+    "NPM": {
+      "type": "biginteger"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mata_kuliahs",
+  "info": {
+    "singularName": "mata-kuliah",
+    "pluralName": "mata-kuliahs",
+    "displayName": "mata_kuliah",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama_mata_kuliah": {
+      "type": "string"
+    },
+    "SKS": {
+      "type": "integer"
+    },
+    "nilais": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nilai.nilai",
+      "mappedBy": "mata_kuliah"
+    }
+  }
+}
